@@ -36,7 +36,7 @@
         Rellena tus datos para gestionar tus pedidos y descubrir las últimas zapatillas deportivas.
       </p>
 
-  <form class="formulario" action="../controllers/procesar_registro.php" method="post">
+  <form class="formulario" action="../controllers/registro_usuario.php" method="post">
         <div class="campo">
           <label for="nombre">Nombre</label>
           <input class="entrada" type="text" id="nombre" name="nombre"
