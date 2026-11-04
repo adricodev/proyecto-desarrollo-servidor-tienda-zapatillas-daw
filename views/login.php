@@ -36,7 +36,7 @@
         Accede a tu cuenta para gestionar tus pedidos.
       </p>
 
-      <form class="formulario" action="../controllers/procesar_login.php" method="post">
+      <form class="formulario" action="../controllers/login_usuario.php" method="post">
         <div class="campo">
           <label for="email">Correo electrónico</label>
           <input class="entrada" type="email" id="email" name="email"
@@ -69,3 +69,9 @@
   </footer>
 </body>
 </html>
+
+
+<?php if (isset($_GET["error"])): ?>
+    <!--<h1>Estructura para probar cuando falle el logeo de usuario</h1> -->
+    <p class="mensaje-error">Correo o contraseña incorrectos.</p>
+<?php endif; ?>
