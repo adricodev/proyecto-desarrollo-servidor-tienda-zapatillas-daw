@@ -26,9 +26,17 @@ if(mysqli_num_rows($resultado)==1){
         $_SESSION["id_usuario"] = $usuario["id_usuario"];
         $_SESSION["nombre"] = $usuario["nombre"];
         $_SESSION["rol"] = $usuario["rol"];
-        header("Location: ../index.php");
+
+        // Segun el rol, va al panel o a la tienda.
+        if($usuario["rol"]=="administrador"){
+            header("Location: ../views/admin_panel.php");
+        }else{
+            header("Location: ../index.php");
+        }
         exit();
     }
+
+
 }
 //En caso de error, arroja el <p> de login.php que indica el error de pass o de usuario.
     header("Location: ../views/login.php?error=1");
