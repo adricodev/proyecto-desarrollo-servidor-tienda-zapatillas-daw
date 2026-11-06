@@ -36,6 +36,10 @@
         Rellena tus datos para gestionar tus pedidos y descubrir las últimas zapatillas deportivas.
       </p>
 
+      <?php if (isset($_GET["error"]) && $_GET["error"] == "email"): ?>
+        <p class="mensaje-error">Ese correo ya está registrado. Prueba a iniciar sesión.</p>
+      <?php endif; ?>
+
   <form class="formulario" action="../controllers/registro_usuario.php" method="post">
         <div class="campo">
           <label for="nombre">Nombre</label>
