@@ -1,0 +1,17 @@
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+
+# Material del curso y originales de las imagenes
+docs/_Desarrollo en entorno SERVIDOR/
+docs/temario.pdf
+docs/img-originales/
+
+# Temporales
+*.zip
+*.log
