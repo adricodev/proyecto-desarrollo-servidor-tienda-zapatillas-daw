@@ -12,6 +12,9 @@ docs/_Desarrollo en entorno SERVIDOR/
 docs/temario.pdf
 docs/img-originales/
 
+# Exportaciones de la base de datos (llevan contraseñas)
+*.sql
+
 # Temporales
 *.zip
 *.log
