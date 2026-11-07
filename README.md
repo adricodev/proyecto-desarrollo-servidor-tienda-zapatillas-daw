@@ -1,6 +1,6 @@
 # Tienda de Zapatillas Deportivas
 
-Trabajo de enfoque de **Desarrollo en entorno Cliente FP DAW**. Tienda online de zapatillas
+Trabajo de enfoque de **Desarrollo en entorno Servidor FP DAW**. Tienda online de zapatillas
 deportivas hecha con **PHP y MySQL**, sin frameworks ni librerías externas.
 
 La aplicación tiene dos zonas: una tienda pública donde el cliente consulta el catálogo, añade
