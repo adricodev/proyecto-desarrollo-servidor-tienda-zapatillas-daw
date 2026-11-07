@@ -15,6 +15,10 @@ docs/img-originales/
 # Exportaciones de la base de datos (llevan contraseñas)
 *.sql
 
+# ...excepto el esquema y los datos iniciales, que no tienen datos personales
+!database/estructura.sql
+!database/datos_iniciales.sql
+
 # Temporales
 *.zip
 *.log
