@@ -1,13 +1,11 @@
 # Tienda de Zapatillas Deportivas
 
-Proyecto final del ciclo de **Desarrollo de Aplicaciones Web**. Tienda online de zapatillas
+Trabajo de enfoque de **Desarrollo en entorno Cliente FP DAW**. Tienda online de zapatillas
 deportivas hecha con **PHP y MySQL**, sin frameworks ni librerías externas.
 
 La aplicación tiene dos zonas: una tienda pública donde el cliente consulta el catálogo, añade
 productos al carrito y confirma pedidos, y un panel de administración protegido desde el que se
 gestionan usuarios y productos.
-
-**Web en producción:** https://deportivas-davante.gt.tc/
 
 ---
 
