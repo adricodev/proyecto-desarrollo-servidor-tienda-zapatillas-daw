@@ -60,6 +60,8 @@ require "controllers/listar_productos.php";
     <section class="productos" id="productos" aria-labelledby="titulo-productos">
       <div class="productos-cabecera">
         <h2 id="titulo-productos">Productos destacados</h2>
+        <input class="entrada buscador" type="search" id="buscador"
+               placeholder="Buscar por nombre..." aria-label="Buscar zapatilla por nombre">
       </div>
 
       <!-- Productos dibujados desde la BD -->
@@ -79,6 +81,10 @@ require "controllers/listar_productos.php";
                   </article>
               <?php endforeach; ?>
       </div>
+
+      <p id="sin-resultados" class="estado-vacio" hidden>
+        No hay zapatillas que coincidan con la búsqueda.
+      </p>
     </section>
   </main>
 
@@ -88,5 +94,7 @@ require "controllers/listar_productos.php";
       <a href="#contenido">Volver arriba</a>
     </div>
   </footer>
+
+  <script src="public/js/main.js"></script>
 </body>
 </html>

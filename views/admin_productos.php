@@ -77,9 +77,11 @@ require "../controllers/admin_listar_productos.php";
               <td class="admin-botones">
                 <a class="boton boton-secundario" href="admin_producto_form.php?id=<?= $producto["id_producto"] ?>">Editar</a>
                 <?php if ($producto["activo"] == 1): ?>
-                  <a class="boton boton-secundario" href="../controllers/admin_borrar_producto.php?id=<?= $producto["id_producto"] ?>">Desactivar</a>
+                  <a class="boton boton-secundario" href="../controllers/admin_borrar_producto.php?id=<?= $producto["id_producto"] ?>"
+                     data-confirmar="¿Seguro que quieres desactivar este producto?">Desactivar</a>
                 <?php else: ?>
-                  <a class="boton boton-secundario" href="../controllers/admin_borrar_producto.php?id=<?= $producto["id_producto"] ?>">Activar</a>
+                  <a class="boton boton-secundario" href="../controllers/admin_borrar_producto.php?id=<?= $producto["id_producto"] ?>"
+                     data-confirmar="¿Seguro que quieres activar este producto?">Activar</a>
                 <?php endif; ?>
               </td>
             </tr>
@@ -95,5 +97,7 @@ require "../controllers/admin_listar_productos.php";
       <a href="admin_panel.php">Volver al panel</a>
     </div>
   </footer>
+
+  <script src="../public/js/main.js"></script>
 </body>
 </html>

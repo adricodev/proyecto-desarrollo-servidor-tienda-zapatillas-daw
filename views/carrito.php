@@ -95,7 +95,8 @@ require "../controllers/ver_carrito.php";
 
           <div class="carrito-acciones">
             <a class="boton boton-secundario" href="../index.php#productos">Seguir comprando</a>
-            <a class="boton boton-secundario" href="../controllers/carrito_vaciar.php">Vaciar carrito</a>
+            <a class="boton boton-secundario" href="../controllers/carrito_vaciar.php"
+               data-confirmar="¿Seguro que quieres vaciar el carrito?">Vaciar carrito</a>
             <a class="boton boton-principal" href="checkout.php">Confirmar pedido</a>
           </div>
         </div>
@@ -109,5 +110,7 @@ require "../controllers/ver_carrito.php";
       <a href="../index.php">Volver a la tienda</a>
     </div>
   </footer>
+
+  <script src="../public/js/main.js"></script>
 </body>
 </html>

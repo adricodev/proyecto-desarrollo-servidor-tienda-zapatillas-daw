@@ -1028,6 +1028,21 @@ textarea.entrada {
   width: auto;
 }
 
+/* ---------- 17. Buscador del catalogo ---------- */
+.buscador {
+  max-width: 320px;
+}
+
+@media (max-width: 640px) {
+  .productos-cabecera {
+    flex-wrap: wrap;
+  }
+
+  .buscador {
+    max-width: 100%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -83,9 +83,11 @@ require "../controllers/admin_listar_usuarios.php";
 
                 <?php if ($usuario["id_usuario"] != $_SESSION["id_usuario"]): ?>
                   <?php if ($usuario["activo"] == 1): ?>
-                    <a class="boton boton-secundario" href="../controllers/admin_borrar_usuario.php?id=<?= $usuario["id_usuario"] ?>">Desactivar</a>
+                    <a class="boton boton-secundario" href="../controllers/admin_borrar_usuario.php?id=<?= $usuario["id_usuario"] ?>"
+                       data-confirmar="¿Seguro que quieres desactivar este usuario?">Desactivar</a>
                   <?php else: ?>
-                    <a class="boton boton-secundario" href="../controllers/admin_borrar_usuario.php?id=<?= $usuario["id_usuario"] ?>">Activar</a>
+                    <a class="boton boton-secundario" href="../controllers/admin_borrar_usuario.php?id=<?= $usuario["id_usuario"] ?>"
+                       data-confirmar="¿Seguro que quieres activar este usuario?">Activar</a>
                   <?php endif; ?>
                 <?php endif; ?>
               </td>
@@ -102,5 +104,7 @@ require "../controllers/admin_listar_usuarios.php";
       <a href="admin_panel.php">Volver al panel</a>
     </div>
   </footer>
+
+  <script src="../public/js/main.js"></script>
 </body>
 </html>

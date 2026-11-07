@@ -69,7 +69,7 @@ if (count($lineas) == 0) {
         </p>
       </div>
 
-      <form class="checkout-formulario formulario" action="../controllers/confirmar_pedido.php" method="post">
+      <form class="checkout-formulario formulario" id="form-pedido" action="../controllers/confirmar_pedido.php" method="post">
         <div class="campo">
           <label for="direccion">Dirección de envío</label>
           <input class="entrada" type="text" id="direccion" name="direccion"
@@ -78,7 +78,7 @@ if (count($lineas) == 0) {
 
         <div class="botones">
           <a class="boton boton-secundario" href="carrito.php">Volver al carrito</a>
-          <button class="boton boton-principal" type="submit">Confirmar pedido</button>
+          <button class="boton boton-principal" id="boton-confirmar" type="submit">Confirmar pedido</button>
         </div>
       </form>
     </div>
@@ -90,5 +90,7 @@ if (count($lineas) == 0) {
       <a href="../index.php">Volver a la tienda</a>
     </div>
   </footer>
+
+  <script src="../public/js/main.js"></script>
 </body>
 </html>
