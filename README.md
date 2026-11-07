@@ -241,5 +241,6 @@ El proyecto está hecho con fines académicos y hay decisiones que en producció
 ---
 
 ## Autor
-
+Adrián Pineda Torrejón
 Proyecto académico del ciclo de Desarrollo de Aplicaciones Web.
+Readme creado con ChatGPT.
