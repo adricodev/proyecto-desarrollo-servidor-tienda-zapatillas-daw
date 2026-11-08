@@ -7,6 +7,8 @@ La aplicación tiene dos zonas: una tienda pública donde el cliente consulta el
 productos al carrito y confirma pedidos, y un panel de administración protegido desde el que se
 gestionan usuarios y productos.
 
+**Web en producción:** https://deportivas-davante.gt.tc/
+
 ---
 
 ## Funcionalidades
@@ -234,14 +236,21 @@ El proyecto está hecho con fines académicos y hay decisiones que en producció
 - **No se escapa la salida con `htmlspecialchars()`.** Todo el contenido viene de la propia base
   de datos, pero si se permitiera a los usuarios escribir texto libre habría que escaparlo para
   evitar XSS.
-- **El stock no se comprueba antes de descontarlo.** Con dos compras simultáneas del último par
-  podría quedar en negativo; la solución sería una transacción con `SELECT ... FOR UPDATE`.
-- **La página de pedido confirmado no verifica que el pedido pertenezca al usuario conectado.**
+- **El stock se comprueba antes de confirmar, pero fuera de una transacción.** Dos compras
+  simultáneas del último par podrían dejar el stock en negativo; la solución sería una
+  transacción con `SELECT ... FOR UPDATE`.
 - **No hay pasarela de pago.** El checkout solo recoge los datos de envío.
+- **No hay recuperación de contraseña.** El hosting gratuito no permite enviar correo.
+
+---
+
+## Documentación
+
+- [Modelo entidad-relación](docs/diagrama-er.pdf)
 
 ---
 
 ## Autor
+
 Adrián Pineda Torrejón
 Proyecto académico del ciclo de Desarrollo de Aplicaciones Web.
-Readme creado con ChatGPT.
