@@ -1,6 +1,6 @@
 # Tienda de Zapatillas Deportivas
 
-Proyecto final del ciclo de **Desarrollo de Aplicaciones Web**. Tienda online de zapatillas
+Proyecto final del ciclo de **Desarrollo en entorno Servidor FP superior Desarrollo Aplicaciones Web**. Tienda online de zapatillas
 deportivas hecha con **PHP y MySQL**, sin frameworks ni librerías externas.
 
 La aplicación tiene dos zonas: una tienda pública donde el cliente consulta el catálogo, añade
@@ -209,7 +209,8 @@ categoria (1) ──< producto (1) ──< producto_talla
 | `linea_pedido` | Productos, tallas y cantidades de cada pedido |
 
 Los borrados de usuarios y productos son **lógicos** (`activo = 0`) para no romper el histórico
-de pedidos. El resto de relaciones usan `ON DELETE CASCADE`.
+de pedidos. Las claves ajenas están definidas con `ON DELETE RESTRICT`, así que la propia base de
+datos impide borrar un producto o un usuario que ya tenga pedidos asociados.
 
 ---
 
