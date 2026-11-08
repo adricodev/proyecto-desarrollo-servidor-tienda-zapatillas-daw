@@ -1,9 +1,26 @@
 <?php
 // Pagina final tras confirmar un pedido.
 require "../controllers/sesion_index_usuario.php";
+require "../models/conexion.php";
 
-$id_pedido = $_GET["id"] ?? 0;
-$id_pedido = (int) $id_pedido;
+// Solo el usuario que ha hecho el pedido puede ver su confirmacion.
+if (!$usuario_logueado) {
+    header("Location: login.php");
+    exit;
+}
+
+$id_pedido = (int) ($_GET["id"] ?? 0);
+$id_usuario = (int) $_SESSION["id_usuario"];
+
+$sql = "SELECT id_pedido FROM pedido
+        WHERE id_pedido = $id_pedido AND id_usuario = $id_usuario";
+$resultado = mysqli_query($link, $sql);
+
+// Si el pedido no existe o es de otro usuario, volvemos al catalogo.
+if (mysqli_num_rows($resultado) == 0) {
+    header("Location: ../index.php");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
