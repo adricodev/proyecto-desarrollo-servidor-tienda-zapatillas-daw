@@ -36,6 +36,10 @@
         Accede a tu cuenta para gestionar tus pedidos.
       </p>
 
+      <?php if (isset($_GET["error"])): ?>
+        <p class="mensaje-error" role="alert">Correo o contraseña incorrectos.</p>
+      <?php endif; ?>
+
       <form class="formulario" action="../controllers/login_usuario.php" method="post">
         <div class="campo">
           <label for="email">Correo electrónico</label>
@@ -51,7 +55,7 @@
 
         <div class="botones">
           <button class="boton boton-principal" type="submit">Entrar</button>
-      <button class="boton boton-secundario" type="reset">Limpiar</button>
+          <button class="boton boton-secundario" type="reset">Limpiar</button>
         </div>
       </form>
 
@@ -69,9 +73,3 @@
   </footer>
 </body>
 </html>
-
-
-<?php if (isset($_GET["error"])): ?>
-    <!--<h1>Estructura para probar cuando falle el logeo de usuario</h1> -->
-    <p class="mensaje-error">Correo o contraseña incorrectos.</p>
-<?php endif; ?>
