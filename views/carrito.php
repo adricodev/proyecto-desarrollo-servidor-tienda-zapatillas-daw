@@ -48,6 +48,12 @@ require "../controllers/ver_carrito.php";
       <h1>Carrito</h1>
     </div>
 
+    <?php if (isset($_GET["error"]) && $_GET["error"] === "stock"): ?>
+      <p class="mensaje-error" role="alert">
+        No hay stock suficiente de alguno de los productos. Revisa las cantidades.
+      </p>
+    <?php endif; ?>
+
     <?php if (count($lineas) == 0): ?>
       <p class="estado-vacio">
         Tu carrito está vacío.
