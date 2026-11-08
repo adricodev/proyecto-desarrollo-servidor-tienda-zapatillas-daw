@@ -1,13 +1,11 @@
 # Tienda de Zapatillas Deportivas
 
-Proyecto final del ciclo de **Desarrollo en entorno Servidor FP superior Desarrollo Aplicaciones Web**. Tienda online de zapatillas
+Proyecto final del ciclo de **Desarrollo de Aplicaciones Web**. Tienda online de zapatillas
 deportivas hecha con **PHP y MySQL**, sin frameworks ni librerías externas.
 
 La aplicación tiene dos zonas: una tienda pública donde el cliente consulta el catálogo, añade
 productos al carrito y confirma pedidos, y un panel de administración protegido desde el que se
 gestionan usuarios y productos.
-
-**Web en producción:** https://deportivas-davante.gt.tc/
 
 ---
 
@@ -244,5 +242,6 @@ El proyecto está hecho con fines académicos y hay decisiones que en producció
 ---
 
 ## Autor
-
+Adrián Pineda Torrejón
 Proyecto académico del ciclo de Desarrollo de Aplicaciones Web.
+Readme creado con ChatGPT.
