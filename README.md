@@ -214,39 +214,10 @@ datos impide borrar un producto o un usuario que ya tenga pedidos asociados.
 
 ---
 
-## Decisiones técnicas
-
-- **Rutas relativas.** Los `require` usan rutas como `../controllers/...` en lugar de `__DIR__`,
-  de modo que el proyecto funciona igual en local y en un hosting con subcarpeta.
-- **`index.php` como punto de entrada.** Solo incluye el controlador del catálogo; no contiene
-  lógica ni HTML.
-- **Carrito en sesión.** Se guarda en `$_SESSION["carrito"]` con la clave `id_producto-talla`,
-  así no hace falta una tabla temporal y el carrito se mantiene entre páginas.
-- **Precios.** Se formatean con `number_format($precio, 2, ",", ".")` para mostrar coma decimal.
-- **Baja lógica.** Se alterna con `UPDATE ... SET activo = 1 - activo`, sin borrar filas.
-
----
-
-## Limitaciones conocidas
-
-El proyecto está hecho con fines académicos y hay decisiones que en producción habría que cambiar:
-
-- **Las contraseñas se guardan en texto plano.** Lo correcto sería `password_hash()` al
-  registrarse y `password_verify()` al iniciar sesión.
-- **No se escapa la salida con `htmlspecialchars()`.** Todo el contenido viene de la propia base
-  de datos, pero si se permitiera a los usuarios escribir texto libre habría que escaparlo para
-  evitar XSS.
-- **El stock se comprueba antes de confirmar, pero fuera de una transacción.** Dos compras
-  simultáneas del último par podrían dejar el stock en negativo; la solución sería una
-  transacción con `SELECT ... FOR UPDATE`.
-- **No hay pasarela de pago.** El checkout solo recoge los datos de envío.
-- **No hay recuperación de contraseña.** El hosting gratuito no permite enviar correo.
-
----
-
 ## Documentación
 
 - [Modelo entidad-relación](docs/diagrama-er.pdf)
+- [Diagrama de uso de las entidades](docs/diagrama-uso.png)
 
 ---
 
